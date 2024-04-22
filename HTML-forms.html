@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <style>
+        /* /* form div{
+        border: 5px solid red;
+       } */
+        /* #add1{
+        border: 3px solid rgb(10, 6, 44);
+       }
+       *{
+        background-color: rgb(3, 43, 78);
+        color :azure
+       } */
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <h1>HTML Forms</h1>
+    <form>
+        <div>
+            <label for="username">Username:
+                <input type="text" placeholder="John Doe" required ></label>
+        </div>
+        <div>
+            <label for="e-mail">Email:</label>
+            <input type="email" required>
+    
+        </div>
+        <div>
+            <label for="userphone">Phone Number :
+                <input type="tel" placeholder="+91 7000 35246">
+            </label>
+        </div>
+        <div>
+            <label for="userpass">Password :
+                <input type="password" placeholder="Enter Password">
+            </label>
+        </div>
+
+        <div>
+            <input type="radio" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" name="gender">
+            <label for="female">Female</label>
+        </div>
+
+
+        <div>
+            <label for="usercity">City:</label>
+            <select name="city">
+                <option value="Mohali">Mohali</option>
+                <option value="Jalandhar">Jalandhar</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Ketnal">Kernal</option>
+                <option value="Guwahati">Guwahati</option>
+
+            </select>
+        </div>
+        <div>
+            <label for="Game">Game:</label>
+
+            <input type="checkbox" name="Game" id="soccer">
+            <label for="soccer">Socccer</label>
+
+            <input type="checkbox" name="Game">
+            <label for="Cricket">Cricket</label>
+
+            <input type="checkbox" name="Game">
+            <label for="Football">Football</label>
+        </div>
+
+        <div>
+            <label for="checkbox">Are you above 18? <br>
+                <label for="Yes"> YES</label>
+                <input type="radio" name="18">
+                <label for="No">NO</label>
+                <input type="radio" name="18">
+            </label>
+        </div>
+        <div>
+            <label for="upload">Upload:</label>
+            <input type="file">
+            <button type="submit">Upload</button>
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <textarea name="address" id="add1" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit" value="submit">Register</button>
+        <button type="reset" value="reset">Reset</button>
+    </form>
+
+
+
+    <div>
+        <h2>HTML5 input types</h2>
+
+        <label >Choose a color:</label>
+        <input type="color">
+
+        <label >Choose a color:</label>
+        <input type="date">
+        <input type="datetime-local">
+        <input type="range">
+        <input type="search"> <br>
+       
+
+<a href="html-101.html" target="_blank">Go to Start</a>
+
+    </div>
+</body>
+
+</html>
