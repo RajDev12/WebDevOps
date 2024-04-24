@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOX Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            background-color: red;
+            /* height: 60px; */
+            width: 150px;
+            border: 2px solid black;
+            padding: 30px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            /* margin-top: 10px;
+            margin-bottom: 10px; */
+
+        }
+
+        .box2 {
+            background-color: rgb(39, 244, 63);
+            height: 60px;
+            width: 250px;
+            border: 5px solid ;
+           
+
+
+            /* padding: 10px; */
+
+        }
+        .outerBox{
+            border: 5px solid red;
+            width: 300px;
+            background-color: blueviolet;
+            padding: 15px 0 15px 0;
+            margin-bottom: 10px;
+        }
+        li{
+            list-style: none;
+        }
+        body{
+            background-image:"html-element.png" ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerBox">
+        <div class="box1">
+    
+            <ol>
+                <li>Hello</li>
+                <li>World</li>
+                <li>World</li>
+                <li>World</li>
+            
+            </ol>
+        </div>
+    </div>
+
+
+    <div class="box2">
+        Hello World
+    </div>
+</body>
+
+</html>
