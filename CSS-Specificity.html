@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Specificity</title>
+    <style>
+   #unique{
+    color: chocolate;
+   }
+    
+    .purple{
+        color: purple;
+    } 
+    .red{
+        color: red;
+    }
+   
+    .blue{
+        color: navy;
+    }
+    /* .blue{
+        color: navy !important;
+    } */
+    /* [data-x]{
+        color: chocolate;
+    } */
+    /* h1.yellow{
+        specificty=1+10
+    } */
+
+    .blue{
+        color: blue;
+    }
+    .red{
+        color: red ;
+    }
+    h1{
+        color: aliceblue;
+    }
+    [data-x="a"]{
+        color: rgb(220, 180, 17);
+    }
+
+
+    
+   
+    </style>
+</head>
+<body>
+    Task 1= Create a heading inside a div with three classes . <br>
+    Task 2= Change the color via all the classes including heading tag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1  id="unique"  class="blue yellow red purple" data-x="a">I am not the One.</h1>
+
+
+
+
+    <h1 class="blue yellow red purple" data-x="a">I am not the One.</h1>
+
+
+
+    <h1 class="blue yellow red purple" style="color: rgb(135, 237, 40);">I am not the One.</h1>
+    <h2>1.If targeted with all classes(not by any tag), then the last written class will get priority.</h2>
+    <h2>Order= !important, Inline CSS, ID selector, Class & attribute selector, Eelement Selector, Universal Seleector. </h2>
+</body>
+</html>

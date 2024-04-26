@@ -1,24 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME PAGE</title>
+    <title>CSS Float Property</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+       * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(4, 39, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgba(45, 98, 73, 0.947);
+        }
+
+        nav ul {
+            /* list-style-type: none; */
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav li {
+            list-style: none;
+            margin: 20px;
+        }
+
+        .left {
+            font-size: 1.3rem;
+        }
+        body {
+            background-color: rgb(35, 93, 114);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /*CSS for the iframe page*/
+        iframe {
+            height: 600px;
+            width: 80%;
+            border: 5px solid rgb(98, 114, 98);
+        }
+
+        frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* CSS for Sidebar */
+        div ul li,
+        a {
+            list-style: none;
+            margin: 5px;
+            text-decoration: none;
+            color: rgb(8, 5, 1);
+        }
+
+        .SideBar {
+            border: 5px solid rgba(86, 114, 158, 0.335);
+            width: 150px;
+            height: 500px;
+            float: left;
+            margin-right: 10px;
+            display: flex;
+            justify-content: left;
+
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>This is my Homepage</h1>
+    <!-- <div class="BOX">
+        <img src="/images/html-element.png" alt="">
+        <div>CSS TUTORIAL</div>
+        <div class="box">Home</div>
+        <div class="box">About</div>
+        <div class="box box3">Contact</div>
+    </div> -->
 
-<a href="html-101.html">
-    <button>HTML INTRODUCTION</button>
+    <header>
+        <nav>
+            <div class="left">
+                DevOps-PortFolio
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Home</li>
+                    <li>Courses</li>
+                    <li>Projects</li>
+                    <li>Experiences</li>
+                    <li>Contact Me</li>
+                    <li>About</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-</a>
 
-<video src="/html-video.mp4" height="30%" width="40%" controls></video>
-<div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/it1rTvBcfRg?si=HayI4bq9dW4_XbSS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="SideBar">
+        <ul>
+            <li><a href="html-101.html" target="myFrame">CSS intro</a></li>
+            <li><a href="html-102.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+            <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+        </ul>
+    </div>
 
-</div>
-<audio src="Majhe-Majhe-Tobo-Dekha-Pai.mp3" controls></audio>
-    
+
+
+    <div class="frame">
+        <iframe frameborder="5px" name="myFrame"></iframe>
+    </div>
+
 </body>
+
 </html>
