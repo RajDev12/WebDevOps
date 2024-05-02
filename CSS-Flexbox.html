@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox</title>
+    <style>
+        .container {
+            border: 3px solid maroon;
+            display: flex;
+            justify-content: center;
+            /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            /* align-content: center; */
+            flex-flow: row wrap;
+            height: 300px;
+
+        }
+
+        .items {
+            height: 30px;
+            width: 40px;
+            border: 3px solid green;
+            margin: 10px;
+
+        }
+
+        .item1 {
+            background-color: rgb(132, 146, 146);
+            /* flex-grow: 2; */
+
+        }
+
+        .item2 {
+            align-self: center;
+            /* position: relative;
+            top: 50px; */
+        }
+
+        .item3 {
+            /* flex-grow: 0.5;
+            flex-shrink: 3; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items item1">1</div>
+        <div class="items item2">2</div>
+        <div class="items item3">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items">10</div>
+        <div class="items">6</div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items">10</div>
+        <div class="items">6</div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+
+
+    </div>
+</body>
+
+</html>

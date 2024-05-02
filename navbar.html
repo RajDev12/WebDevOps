@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(155, 154, 163);
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 3px solid green;
+            height: 80px;
+        }
+
+        div li {
+            list-style: none;
+
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        div>li {
+            border: 3px solid  rgb(146, 187, 177);
+            border-radius: 8px;
+            margin: 5px;
+
+        }
+
+        nav>img {
+            height: 60px;
+            width: 50px;
+        }
+
+        .title {
+            align-self: inherit;
+        }
+
+        /* span {
+            border: 1px solid;
+            margin-top: px;
+            padding-top: 40px;
+
+
+        } */
+        .img {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="title">
+                <div class="img">
+                    <img src="images/icons8-css3-64.png" alt="Logo of my page">
+                    CSS Navbar
+                </div>
+            </div>
+            <div class="menu">
+                <li>Home</li>
+                <li>About</li>
+                <li>Courses</li>
+                <li>Projects</li>
+                <li>Cobtact us</li>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="firstSection">
+            <div class="left">
+                Hi i am a web developer and i am learning Flexbox in CSS
+            </div>
+            <div class="right">
+                <img src="images/—Pngtree—illustration of female programmer at_6006375.png" alt="">
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

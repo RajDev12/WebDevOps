@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Align</title>
+    <style>
+        .container{
+            height: 450px;
+            width: 900px;
+            border: 2px solid;
+            display: grid;
+            grid-template-columns: 100px 200px 50px 50px;
+            grid-template-rows: 150px 50px 50px;
+
+            /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+            justify-content: center;
+            align-items: center;
+        }
+        .item{
+            height: 20px;
+            /* width: 40px; */
+            border: 2px solid;
+        }
+        .item1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .item3{
+            /* grid-column-start: 1;
+            grid-column-end: 2; */
+             /* grid-column: 3/4; */
+            
+            
+        }
+        .item2{
+            /* grid-column: 1/2; */
+            /* grid-row: 1/4; */
+        }
+        .item5{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+    
+        
+    </div>
+</body>
+</html>

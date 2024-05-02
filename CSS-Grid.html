@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(118, 179, 157);
+        }
+
+        .container {
+            border: 5px solid black;
+            display: grid;
+            /* width: 100%; */
+            /* height: 100vh; */
+
+            grid-template-areas: "nav nav nav"
+                "side main float"
+                "footer footer footer";
+            grid-template-rows: 12vh 70vh 20vh;
+            grid-template-columns: 15vw 65.4vw 18vw;
+
+
+
+        }
+
+        .item {
+            /* height: 30px; */
+            border: 3px solid green;
+
+        }
+
+        .item1 {
+            grid-area: nav;
+            background-color: rgb(26, 131, 157);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+           
+            
+        }
+        /* .item1 >h1{
+            display: inline;
+            position: relative;
+            top: 20px;
+            left: 150px;
+            
+            background-color: antiquewhite;
+        } */
+
+        nav > ul {
+            display: flex;
+            /* background-color: blueviolet; */
+            justify-content: end;
+           
+           
+        }
+        nav ul li{
+            list-style: none;
+            /* border: 2px solid rgb(35, 203, 147); */
+            margin: 10px 20px;
+            border-radius: 5px ;
+            /* background-color: rgb(49, 173, 132); */
+            color: aliceblue;
+            font-size: 1.15rem;
+            
+
+        }
+        
+        nav ul li:hover{
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: aqua;
+        }
+        nav a{
+            text-decoration: none;
+            color: antiquewhite;
+        }
+        
+
+        .item5 {
+            grid-area: footer;
+            background-color: aquamarine  ;
+            
+        }
+        span{
+           font-size: 2rem;
+            
+        }
+        /* footer{
+            background-color: aqua;
+            color: aliceblue;
+        } */
+        footer >ul {
+            display: flex;
+          
+            justify-content: flex-end;
+            align-items: center;
+           
+            
+        }
+        footer ul li{
+            list-style: none;
+            margin: 0 30px;
+        }
+        .item5 img{
+            height: 80px;
+            width: 60px;
+            margin-left: 30px;
+        }
+        .copywrite{
+            margin: -32px 669px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">
+
+            <!-- <h1>Info-Tree</h1> -->
+            <span>INFO-Tree</span>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Category</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="item item2">
+            <div class="SideBar">
+                <ul>
+                    <li><a href="html-101.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="html-102.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame a">CSS intro 1</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+                    <li><a href="CSS-boxModel.html" target="myFrame">CSS intro</a></li>
+                </ul>
+            </div> 
+        </div>
+        <div class="item item3">
+            <iframe src="" frameborder="0" name="myFrame" style="height: 70vh; width: 65.5vw;"></iframe>
+        </div>
+        <!-- <div class="item item4">
+            <iframe src="" frameborder="0" name="myFrame a"></iframe>
+        </div> -->
+        <div class="item item5">
+               <h1>INFO-TREEISM</h1> 
+               <footer>
+                <ul>
+                    <li>Career</li>
+                    <li>Business</li>
+                    <li>Research</li>
+                    <li>Market</li>
+                    <li>Analytics</li>
+                    <li>Research</li>
+                    <li>Research</li>
+                </ul>
+                <div><img src="images/—Pngtree—illustration of female programmer at_6006375.png" alt=""></div>
+                <div class="copywrite"><em>@Copywrite- 2003</em></div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
