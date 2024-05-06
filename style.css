@@ -1,0 +1,28 @@
+h1 {
+    color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.outline {
+    height: 100px;
+    width: 100px;
+    border: 5px solid green;
+    margin: auto;
+    outline: 4px solid red;
+    outline-offset: 20px;
+    background-color: blue;
+    position: relative;
+    top: 22px;
+}
+
+.outer {
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    margin: auto;
+}

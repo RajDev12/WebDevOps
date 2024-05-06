@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="billing">
+        <label for="destination">Select Destination</label>
+        <select  id="destination">
+            <option value="100">Paris-100</option>
+            <option value="200">Tokyo-100</option>
+            <option value="150">Honkong-150</option>
+        </select>
+        <label for="travelers">Number of travelers
+        </label>
+        <input type="number"id="travelers" value="1" min="12" >
+        <br><br>
+        <label  >Packages</label>
+        <select  id="package" >
+            <option value="1">Standard package</option>
+            <option value="1.5">Premium package</option>
+        </select>
+<button type="button" onclick="bill()">Calculate</button>
+     
+    </form>
+    <h2 id="total_Cost">Total cost: $0</h2>
+
+    <script>
+        function bill(){
+            var destCost=parseFloat(document.getElementById("destination").value);
+            var numPassenger=parseInt(document.getElementById("travelers").value);
+            var numPackage=parseInt(document.getElementById("package").value);
+
+            var total=destCost *numPassenger*numPackage
+            document.getElementById("total_Cost").innerText="Total cost:$" + total.toFixed(2);
+        }
+
+    </script>
+</body>
+</html>
