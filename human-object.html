@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            margin: auto;
+            border: 2px solid black;
+            height: 90px;
+            width:100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            background-color: rgb(159, 163, 163);
+        }
+        .body{
+            border: 2px solid black;
+            height: 190px;
+            width: 200px;
+            border-radius: 52px 52px 0 0;
+            margin: auto;
+            background-color: rgb(159, 163, 163);
+            transition-property: background;
+            transition-duration: 2s;
+
+        }
+        .body:hover{
+            background-color: rgb(241, 14, 14);
+            color: rgb(194, 17, 32);
+        }
+        .outer{
+            margin-top: 100px;
+            /* border: 2px solid black; */
+        }
+        h2{
+            margin: 75px ;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="head"></div>
+        
+        <div class="body"><h2>Stark</h2></div>
+
+    </div>
+</body>
+</html>
