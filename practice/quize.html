@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz App</title>
+    <style>
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styles for the question text */
+        #question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Styles for the options */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            display: none;
+        }
+
+        .answer + label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .answer:checked + label {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        /* Styles for the submit button */
+        #submit {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+   </head>
+<body>
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">Question text</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text">Option A</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text">Option B</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text">Option C</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text">Option D</label>
+                </li>
+            </ul>
+        </div>
+        <button id="submit">Submit</button>
+    </div>
+    <script>
+        const quizData = [
+            {
+                question: "What is the most used programming language in 2021?",
+                a: "Java",
+                b: "C",
+                c: "Python",
+                d: "JavaScript",
+                correct: "d",
+            },
+            {
+                question: "Who is the President of the United States?",
+                a: "Florin Pop",
+                b: "Donald Trump",
+                c: "Ivan Saldano",
+                d: "Joe Biden",
+                correct: "d",
+            },
+            {
+                question: "What does HTML stand for?",
+                a: "Hypertext Markup Language",
+                b: "Cascading Style Sheet",
+                c: "Jason Object Notation",
+                d: "Helicopters Terminals Motorboats Lamborghinis",
+                correct: "a",
+            },
+            {
+                question: "What year was JavaScript launched?",
+                a: "1996",
+                b: "1995",
+                c: "1994",
+                d: "none of the above",
+                correct: "b",
+            },
+        ];
+
+        const quiz = document.getElementById('quiz');
+        const answerEls = document.querySelectorAll('.answer');
+        const questionEl = document.getElementById('question');
+        const a_text = document.getElementById('a_text');
+        const b_text = document.getElementById('b_text');
+        const c_text = document.getElementById('c_text');
+        const d_text = document.getElementById('d_text');
+        const submitBtn = document.getElementById('submit');
+
+        let currentQuiz = 0;
+        let score = 0;
+
+        loadQuiz();
+
+        function loadQuiz() {
+            deselectAnswers();
+            const currentQuizData = quizData[currentQuiz];
+            questionEl.innerText = currentQuizData.question;
+            a_text.innerText = currentQuizData.a;
+            b_text.innerText = currentQuizData.b;
+            c_text.innerText = currentQuizData.c;
+            d_text.innerText = currentQuizData.d;
+        }
+
+        function getSelected() {
+            let answer = undefined;
+            answerEls.forEach((answerEl) => {
+                if (answerEl.checked) {
+                    answer = answerEl.id;
+                }
+            });
+            return answer;
+        }
+
+        function deselectAnswers() {
+            answerEls.forEach((answerEl) => {
+                answerEl.checked = false;
+            });
+        }
+
+        submitBtn.addEventListener('click', () => {
+            const answer = getSelected();
+            if (answer) {
+                if (answer === quizData[currentQuiz].correct) {
+                    score++;
+                }
+
+                currentQuiz++;
+                if (currentQuiz < quizData.length) {
+                    loadQuiz();
+                } else {
+                    quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2>
+                                      <button onclick="location.reload()">Reload</button>`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
