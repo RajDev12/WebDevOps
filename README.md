@@ -1,4 +1,4 @@
-## Project Overview
+[## Project Overview
 
 To design a project for a full-stack web developer based on the provided topics, we'll aim to create a comprehensive learning platform covering HTML, CSS, and a bit of JavaScript. The project will consist of multiple sections focusing on different aspects of web development, allowing learners to grasp fundamental concepts and practice their skills.
 
@@ -41,3 +41,4 @@ To design a project for a full-stack web developer based on the provided topics,
 - Learners will be encouraged to explore advanced topics such as responsive design, web accessibility, and server-side programming for full-stack development.
 
 Throughout the project, emphasis will be placed on hands-on learning, with plenty of exercises and practical examples to reinforce concepts. Learners will also have access to a community forum or discussion platform where they can ask questions, share their projects, and collaborate with peers. By the end of the project, participants should have a solid understanding of front-end web development principles and be ready to explore more advanced topics in both front-end and back-end development.
+](https://www.linkedin.com/in/dibyanshi-roy-6b4a6020b/)
